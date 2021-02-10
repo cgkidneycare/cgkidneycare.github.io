@@ -1,0 +1,755 @@
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	background-color: #004890;
+}
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #65C3A6;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+@font-face {
+    font-family: ClanOTBold;
+    src: url('../fonts/ClanOT-Bold.otf');
+}
+@font-face {
+    font-family: ClanOTBook;
+    src: url('../fonts/ClanOT-Book.otf');
+}
+@font-face{
+  font-family: CantaneoBT;
+  src:url('../fonts/Cataneo-BT.ttf');
+}
+@font-face{
+  font-family: LydianBT;
+  src:url('../fonts/lydian-bt-roman.ttf');
+}
+body{
+  color: #fff;
+  font-family: "ClanOTBook";
+  font-size: 13px;
+  overflow-x: hidden; 
+}
+.clearfix{
+    clear:both;
+}
+.quadContainer{
+  position: relative;
+  height: 720px;
+}
+.rightQuad {
+/*  position: absolute;
+  top: 0%;
+  right: 0;
+  border-right: 75.5vw solid #65C3A6;
+  border-top: 10vw solid transparent;
+  border-bottom: 0vw solid transparent;
+  height: 29.5%;
+  width: 50vw;*/
+  position: absolute;
+  top: 0%;
+  right: 0;
+  border-right: 75.5vw solid #fff;
+  border-top: 10vw solid transparent;
+  border-bottom: 0vw solid transparent;
+  height: 15.5vw;
+  width: 50vw;
+}
+/*.rightQuad{
+	  background-color: #65C3A6;
+  float: right;
+  width: 76.5%;
+  height: 21.5%;
+  
+  position: absolute;
+  right:0;
+  margin-top: 15.5%;
+}
+
+.rightQuad::before {
+    background-color: #65C3A6;
+    content: '';
+    display: inline-block;
+    height: 145%;
+    position: absolute;
+    left:0;
+    top: -96%;
+    transform:             skewY( -9deg ); 
+        -ms-transform:     skewY( -9deg ); 
+        -webkit-transform: skewY( -7.5deg ); 
+        -o-transform:      skewY( -9deg ); 
+        -moz-transform:    skewY( -9deg ); 
+    width: 100%;
+}*/
+
+.leftQuad{
+   /*position:absolute;
+    top:17%;
+    border-left: 20.5vw solid #65C3A6;
+    border-top: 4vw solid transparent;
+    border-bottom: 4vw solid transparent;
+    height: 35.5%;
+    width: 50vw;*/
+    position: absolute;
+  top: 9vw;
+  border-left: 20.5vw solid #65C3A6;
+  border-top: 4vw solid transparent;
+  border-bottom: 4vw solid transparent;
+  height: 16.5vw;
+  width: 50vw;
+}
+
+
+
+.horizontalPlusBar{
+    background-color: #004890;
+    width: 11.5vw;
+    height: 3vw;
+    top: 60px;
+    right:-50px;
+    position: absolute;
+    z-index: 2;
+}
+
+.contentContainer{
+  position: relative;
+  width: 100%;
+
+}
+.firstPartContainer{
+    width: 100%;
+    position: relative;
+}
+.whatWeDo{
+    width: calc(100% - 420px);
+    line-height: 2;
+    text-align: justify;
+	float:left;
+    color: #FFFFFF;
+}
+.notificationArea{
+    position: relative;
+    width:340px;
+    margin-right: 50px;
+    float:right;
+    color: black;
+    height: 400px;
+    vertical-align: top;
+    left: 30px;
+    background-color: #65C3A6;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+.centerBar{
+  position: relative;
+  top:40px;
+  height: 6vw;
+}
+.leftTriangle{
+  top:2vw;
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-top: 0px solid transparent;
+  border-bottom: 3.1vw solid transparent; 
+  
+  border-right:60vw solid  #65C3A6; 
+}
+.rightTriangle{
+  
+  position: absolute;
+  left:59.91vw;
+  width: 0; 
+  height: 0; 
+  border-top:0px solid transparent;
+  border-bottom: 5.2vw solid transparent;
+  
+  border-left: 39vw solid  #65C3A6;
+
+}
+.horizontalSmallPlusBar{
+    height: 1.5vw;
+  width: 4vw;
+  background-color: #004890;
+  top: 1.2vw;
+  left: 67vw;
+  position: absolute;
+}
+.verticalSmallPlusBar{
+    height: 4vw;
+  width: 1.5vw;
+  background-color: #004890;
+  left: 68.26vw;
+  position: absolute;
+}
+
+.icon{
+  height: 80px;
+  cursor: pointer;
+  width: 80px;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  border-radius: 77px;
+}
+.ourServicesIcon{
+  background: url('../img/Doctor_Suitecase.png') center no-repeat;
+  background-size: 65%;
+}
+.ourGoalsIcon{
+  background: url('../img/Mind_map.png') center no-repeat;
+  background-size: 65%;
+}
+.cgLabIcon{
+  background: url('../img/Research.png') center no-repeat;
+  background-size: 65%;
+}
+.cgPharmaIcon{
+  background: url('../img/Antiseptic_Cream.png') center no-repeat;
+  background-size: 65%;
+}
+.galleryIcon{
+  background: url('../img/gallery.png') center no-repeat;
+  background-size: 65%;
+}
+.iconContainer{
+    display: inline-block;
+    width: 130px;
+    margin: 30px;
+}
+
+.iconTitle{
+  text-align: center;
+  padding-top: 10px;
+  font-size: 18px;
+    color:#65C3A6 
+}
+
+.popUpWindow{
+  padding-left: 15px;
+  width: 80%;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  padding-bottom: 15px;
+  min-height: 400px;
+}
+
+.popupTitle{
+    display: inline-block;
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.popupClose{
+  display: inline-block;
+  right: 5px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background: url('../img/close.png') no-repeat; 
+  background-size: contain;
+}
+.popupLeftContent{
+  position: relative;
+  display: inline-block;
+    width: 70%;
+    font-weight: 800;
+  line-height: 2;
+  text-align: justify;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  border-top: 2px solid #51A7F9;
+}
+.popupLeftContent:before {
+  content : "";
+  position: absolute;
+  top    : 0;
+  right  : 0;
+  height  : 50%;
+  width   : 2px;  /* or 100px */
+  border-right:2px solid #51A7F9;
+}
+.popupRightContent {
+  display: inline-block;
+  position: absolute;
+  width: 25%;
+  margin-left: 5px;
+  right: 0;
+  
+}
+.firstLine {
+    font-size: 100px;
+    font-family: "LydianBT";
+  color: #0A468C;
+  width: 100%;
+  text-align: center;
+  word-break: break-all;
+
+}
+.secondLine {
+  color: #0A468C;
+  font-size: 40px;
+  font-family: "LydianBT";
+  text-align: center;
+  word-break:break-word;
+}
+
+.clickableIcons{
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width:33%;
+    float:left;
+}
+
+.rightOfSecondPartContainer{
+  display: inline-block;
+}
+.timings{
+    float: left;
+    width:35%;
+  
+}
+.ourMission{
+    float:right;
+    width: 60%;
+}
+.notificationPopupWindow{
+  display: none;
+  height: 50%;
+  width:50%;
+}
+.notificationPopupWindow .popupClose{
+    display: inline-block;
+    right: -7px;
+    top: -14px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background: url('../img/close.png') no-repeat;
+    background-size: contain;
+  }
+.notificationImage{
+  height: 100%;
+  width:100%;
+}
+.mapWindow{
+  display: none;
+  width: 80%;
+  background-color: #fff;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.colorBlue{
+  color: #0A468C;
+}
+.sideHeader{
+  font-size: 18px;
+  font-family: "ClanOTBold";
+}
+.workTime{
+    font-size: 22px;
+    color:#65C3A6 
+}
+.weekDays{
+  padding-top: 15px;
+}
+.notificationDiv{
+  width: 100%;
+  height: 200px;
+}
+.notifications{
+  height: 100%;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.notificationTitle {
+  padding-left: 20px;
+  padding-top: 10px;
+  /* background: linear-gradient(to bottom,#EEEEEE 0,#E2DBD5 100%); */
+  background-color: #fff;
+  padding-bottom: 3px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  box-shadow: 0 4px 4px -2px #C0BBBB;
+}
+.fbLikes{
+    width: 100% !important;
+ 
+  
+}
+.fb-page.fb_iframe_widget{
+width:100% !important;
+}
+.fb-page *{
+width:100% !important;
+}
+div#u_0_0 {
+  width: 100% !important;
+}
+.notificationCard{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 3px;
+  text-align: justify;
+  min-height: 50px;
+  font-weight: 600;
+  background-color: #D7EDE5;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.fontBold{
+  font-family: "ClanOTBold";
+}
+.whatWeDoContent{
+  padding-left: 15px;
+  padding-top: 20px;
+  font-size: 13px;
+}
+.iconContainer.fourthIconContainer {
+  margin-left: 87px;
+}
+.secondPartContainer{
+  margin-top: 75px;
+}
+.additionalNotes{
+    margin-top:10px;
+    line-height:2;
+}
+.firstIconContainer{
+  margin-left: 50px;
+}
+.thirdIconContainer{
+  margin-left: 50px;
+}
+.missionText{
+    padding-top: 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+.missionHeader{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+.timingHeader{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+.locationHeader{
+   padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+
+}
+.contactHeader{
+   padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+
+}
+.locationContent{
+  padding-top: 20px;
+  line-height: 1.5;
+}
+.secondPartRightContainer{
+    float:right;
+    padding:20px;
+    width: 63%;
+}
+.secondPartSecondLineContainer{
+  margin-top: 50px;
+}
+.location{
+    float:left;
+    width:35%;
+    cursor: pointer;
+}
+.locationImage{
+  background: url('../img/Location.png') 2px no-repeat;
+  background-size: 25px;
+  border: 2px solid #fff;
+  border-radius: 46px;
+  vertical-align: super;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+.address{
+    display: inline-block;
+}
+.contactUs{
+    float:right;
+    width:60%;
+}
+.contactDiv{
+    font-size: 18px;
+    width: 30%;
+    float: left;
+    text-align: center;
+    margin-right: 5%;
+    padding-top: 10px;
+}
+.contactDiv:last-child{
+    margin-right: 0;
+}
+.contactName{
+    color: #65C3A6;
+    font-size: 16px;
+  font-family: "ClanOTBold";
+}
+.contactNumber{
+  padding-top: 5px;
+}
+.contactNumber > a { text-decoration:none; color:inherit; }
+.notificationsEnd{
+  padding-top: 15px;
+  font-weight: 200;
+  text-align: center;
+  font-size: 13px;
+}
+.cgLogo{
+      display: inline-block;
+      position: relative;
+      right: -1263px;
+      top: -334px;
+      width: 400px;
+}
+.dialysisImage{
+      display: inline-block;
+      position: relative;
+      right: -865px;
+      top: -89px;
+      width: 300px;
+}
+.logo{
+    background: url(../img/logo0.png) center no-repeat; 
+    background-size: 100% 100%;
+    position: absolute;
+    right: -758px;
+    top: 0px;
+    width: 527px;
+    height: 140px;
+}
+.cgMachine{
+   background: url(../img/dialaysis_machine1.png) center no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border-bottom: 1px solid #eee;
+    width: 300px;
+    height: 300px;
+    float:left;
+    margin:20px;
+}
+.topContainer{
+    height:400px;
+    width:100%;
+}
+.leftTrapezoid{
+    border-left: 21.5vw solid #fff;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    height: 250px;
+    width: 0;
+    float:left;
+}
+.rightTrapezoid{
+    border-right: 75vw solid #fff;
+    border-top: 150px solid transparent;
+    height: 200px;
+    width: 0;
+    float:right;
+    position: relative;
+}
+/*
+.doctorImg{
+    background: url(../img/doctor.png) center no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: -450px;
+    top: -220px;
+    width: 400px;
+    height: 420px;
+}
+*/
+
+.cglabs{
+    background: url(../img/logo2.png) center no-repeat;
+    background-size: 100% 100%;
+    width: 90%;
+    height: 115px;
+    margin:30px auto 0;
+}
+.cgpharm{
+    background: url(../img/logo1.png) center no-repeat;
+    background-size: 100% 100%;
+    width: 90%;
+    height: 150px;
+    margin:30px auto 0;
+}
+ul {
+    
+    padding-left: 20px;
+}
+.labsServices {
+  margin-top: 40px;
+}
+.labsServices h2 {
+  color: #0A468C;
+  font-family: "ClanOTBold";
+}
+.labsServices li {
+  padding-top: 10px;
+ 
+ font-family: "ClanOTBold";
+}
+.contactDesignation {
+  font-size: 13px;
+  padding-top: 3px;
+}
+.contactEmail{
+    margin-top: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/*---- START :: MOB STYLES--*/
+.mobTopContainer{display: none}
+.mobHeader{
+    width: 100%;
+    height:150px;
+    background: #fff url(../img/logo0.png) center no-repeat;
+    background-size: 45% 50%;
+}
+.mobTopContainer nav{
+  width: 100%;
+  height:50px;
+}
+.mobTopContainer nav .menuItem{
+  width: 25%;
+  height: 50px;
+  background-size: 15%;
+  float: left;
+  cursor: pointer;
+}
+/*---- END :: MOB STYLES--*/
+
+
+/*----- START :: MEDIA QUERY--*/
+
+@media screen and (min-width: 768px) and (max-width: 1220px)
+{
+	.whatWeDo{width: calc(100% - 410px); margin-left:0; float:left}
+	.clickableIcons{text-align:center}
+	.iconContainer{margin: 30px 25px}
+	.clickableIcons,.secondPartRightContainer{float:none; width:96%; padding:0; margin: 0 auto;}
+	.logo{right:-600px; top:20px; width:450px; height:125px}
+	.horizontalPlusBar{right:-40px;}
+}
+@media screen and (min-width: 768px) and (max-width: 1000px)
+{
+	.cgMachine, .aboutUsDesc{float:none;}
+	.aboutUsDesc{margin:0 10px}
+	.cgMachine{margin:0 auto}
+	.notificationArea{height:500px}
+	.logo{right:-525px; top:25px; width:400px; height:100px}
+	.horizontalPlusBar{right:-35px;}
+}
+@media screen and (max-width: 767px){
+  .centerBar, .topContainer, .clickableIcons, .popupRightContent{display: none;}
+  .mobTopContainer{
+    display: block;
+  }
+  .whatWeDo,.secondPartRightContainer, .timings, .ourMission, .location, .contactUs, .contactDiv{
+    float: none;
+    width:100%;
+    padding:0;
+  }
+  .timings, .ourMission, .location, .contactUs{margin-top: 40px}
+  .firstPartContainer, .secondPartRightContainer{
+    width: 94%;
+    margin: 0 auto;
+  }
+  .whatWeDo{margin-left: 0}
+  .contactDiv{text-align: left; margin-top: 15px}
+  .secondPartContainer, .secondPartSecondLineContainer{margin: 0}
+  .whatWeDoContent{padding-left: 0}
+  .aboutUsDesc{width: 100%;}
+  .cgMachine{float: none; margin: 0 auto;}
+  .notificationArea{float:none; left:0; margin-left:0; margin:20px auto 0; }
+}
+@media screen and (min-width: 500px) and (max-width: 767px)
+{
+	 .notificationArea{float:none; width:100%; left:0; margin-left:0; margin:20px auto 0; height:224px}
+	  .fbLikes{float: left; width: 340px !important}
+	  .notificationDiv{float: right; width:calc(100% - 345px)}
+}
+@media screen and (max-width: 500px){
+	.mobTopContainer nav .menuItem{
+		background-size:25%;
+	}
+  .notificationPopupWindow{
+    height: auto;
+    width: 100%;
+  }
+  .notificationPopupWindow .popupClose{
+    display: inline-block;
+    right: -7px;
+    top: -14px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background: url('../img/close.png') no-repeat;
+    background-size: contain;
+  }
+  .mobHeader{
+    background: #fff url(../img/logo0.png) center no-repeat;
+    background-size: 60% 50%;
+  }
+}
+
+/*----- END :: MEDIA QUERY--*/
